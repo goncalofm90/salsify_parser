@@ -41,6 +41,7 @@ module SalsifySync
     def _update_single(product_id, payload)
     path = "#{product_id}" 
     @logger.info("Updating product #{product_id}")
+    ##patch updates only the fields we need to change so it's usually faster
     response = @conn.patch(path) do |req|
         req.headers['Authorization'] = "Bearer #{@token}"
         req.headers['Content-Type'] = 'application/json'
