@@ -5,7 +5,7 @@ require 'dotenv/load'
 require 'ox'
 require 'json'
 
-#classes
+# classes
 require_relative '../lib/salsify/ftp'
 require_relative '../lib/salsify/xml_parser'
 require_relative '../lib/salsify/salsify_api'
