@@ -27,11 +27,3 @@ module SalsifyConnect
   end
 end
 
-## added a list.rb to check xml name so let's check if we are calling it from ftp.rb
-if __FILE__ == $0
-  ##call reusable module
-  client = SalsifyConnect::FtpClient.new
-  remote_file = 'products.xml' 
-  local_file = client.download(remote_file)
-  puts "Downloaded file to: #{local_file}"
-end

@@ -62,7 +62,3 @@ module SalsifySync
     end
   end
 end
-
-
-client = SalsifySync::SalsifyClient.new
-client.upsert_product(json_file: 'products.json')

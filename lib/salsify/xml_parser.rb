@@ -63,9 +63,3 @@ class XmlParser
 end
 
 
-if __FILE__ == $0
-  xml_file = 'products.xml'
-  json_file = 'products.json'
-  output = XmlParser.parse(xml_file, json_file)
-  puts "Parsed to JSON: #{output}"
-end
