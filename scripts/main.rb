@@ -1,3 +1,6 @@
-puts "Please enter your name"
-name = gets.chomp
-puts "Hello, #{name}! I'm Ruby!"
+require 'net/ftp'
+require 'logger'
+require 'dotenv/load'
+require 'ox'
+require 'json'
+require 'faraday'

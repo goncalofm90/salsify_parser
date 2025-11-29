@@ -22,15 +22,20 @@ class XmlParser
       end
     end
 
+    #clean up keys
+    def format_key(name)
+      name.to_s.gsub('_', ' ')
+    end
+
     # get attributes
     def attr(name, value)
-      @current_product[name.to_s] = value if @current_product
+      @current_product[format_key(name)] = value if @current_product
     end
 
     # get the text
     def text(value)
       return unless @current_product && @current_element
-      @current_product[@current_element.to_s] = value.strip
+      @current_product[format_key(@current_element)] = value.strip
     end
 
     # closing tags
